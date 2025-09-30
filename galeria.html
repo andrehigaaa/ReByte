@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <link rel="shorcut icon" href="garbage.png">
+    <!-- Normalize css -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <!-- Css exclusivo da página -->
+    <style>
+        .labubu{
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            background: rgb(255, 253, 248);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        img {
+        height: 500px;
+        object-fit: cover;
+        width: 95%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar py-1 navbar-expand-sm sticky-top shadow" style=" height: 60px">
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <span class="fs-1 page-color thin">Re</span><span class="fs-1 me-5 page-color medium">Byte</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                <span class="navbar-toggler-icon text-end"></span>
+            </button>
+        
+            <!-- Area que pode ser expandida/contraida -->
+            <div class="collapse navbar-collapse verde-escurobg ps-3 rounded" id="menuNavbar">
+
+                <!-- Barra de navegação -->
+                <div class="navbar-nav ms-auto">
+
+                    <!-- Itens da barra de navegação -->
+                    <!-- Principal, contato, sobre, etc -->
+
+                    <!-- Principal -->
+                    <a href="#" class="nav-link page-color suave-hover">Principal</a>
+
+                    <!-- Produtos -->
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle page-color suave-hover" data-bs-toggle="dropdown">Soluções</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="reciclagem.html" class="dropdown-item verde-escuro suave-hover">R. R. R.</a></li>
+                            <li><a href="política.html" class="dropdown-item verde-escuro suave-hover">Políticas</a></li>
+                            <li><a href="consumomoderado.html" class="dropdown-item verde-escuro suave-hover">Pontos de Coleta</a></li>
+                        </ul>
+                    </div>
+                    <a href="noticias.html" class="nav-link page-color suave-hover">Notícias</a>
+                    <a href="perguntas.html" class="nav-link page-color suave-hover">Quiz</a>
+                    <a href="galeria.html" class="nav-link page-color suave-hover">Galeria</a>
+                    <a href="contato.html" class="nav-link page-color suave-hover">Contato</a>
+                    <a href="sobre.html" class="nav-link page-color suave-hover">Sobre</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="bold mt-5 text-center">Galeria de fotos</h1>
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        </div>
+        <div class="labubu shadow preto-verde container py-5 mt-2">
+        
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="foto1.jpg" class="d-block mx-auto rounded" alt="lixo">
+                </div>
+                <div class="carousel-item">
+                    <img src="foto2.jpg" class="d-block mx-auto rounded" alt="lixo">
+                </div>
+                <div class="carousel-item">
+                    <img src="foto3.jpg" class="d-block mx-auto rounded" alt="lixo">
+                </div>
+                <div class="carousel-item">
+                    <img src="foto4.jpg" class="d-block mx-auto rounded" alt="lixo">
+                </div>
+                <div class="carousel-item">
+                    <img src="foto5.jpg" class="d-block mx-auto rounded" alt="lixo">
+                </div>
+                <div class="carousel-item">
+                    <img src="foto6.jpg" class="d-block mx-auto rounded" alt="lixo">
+                </div>
+                <div class="carousel-item">
+                    <img src="foto7.webp" class="d-block mx-auto rounded" alt="lixo">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle ps-3" aria-hidden="true"></span>
+            <span class="visually-hidden">anterior/span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle pe-3" aria-hidden="true"></span>
+            <span class="visually-hidden">próximo</span>
+        </button>
+    </div>
+
+    <footer class="p-3 verde-escurobg page-color text-center">
+        &copy; 2025 ReByte - Todos os Direitos Reservados
+    </footer>
+</html>

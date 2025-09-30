@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="shorcut icon" href="imagens/garbage.png">
+
+    <!-- Normalize css -->
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <nav class="navbar py-1 navbar-expand-sm sticky-top shadow" style=" height: 60px">
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <span class="fs-1 page-color thin">Re</span><span class="fs-1 me-5 page-color medium">Byte</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                <span class="navbar-toggler-icon text-end"></span>
+            </button>
+        
+            <!-- Area que pode ser expandida/contraida -->
+            <div class="collapse navbar-collapse verde-escurobg ps-3 rounded" id="menuNavbar">
+
+                <!-- Barra de navegação -->
+                <div class="navbar-nav ms-auto">
+
+                    <!-- Itens da barra de navegação -->
+                    <!-- Principal, contato, sobre, etc -->
+
+                    <!-- Principal -->
+                    <a href="#" class="nav-link page-color suave-hover">Principal</a>
+
+                    <!-- Produtos -->
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle page-color suave-hover" data-bs-toggle="dropdown">Soluções</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="reciclagem.html" class="dropdown-item verde-escuro suave-hover">R. R. R.</a></li>
+                            <li><a href="política.html" class="dropdown-item verde-escuro suave-hover">Políticas</a></li>
+                            <li><a href="consumomoderado.html" class="dropdown-item verde-escuro suave-hover">Pontos de Coleta</a></li>
+                        </ul>
+                    </div>
+                    <a href="noticias.html" class="nav-link page-color suave-hover">Notícias</a>
+                    <a href="perguntas.html" class="nav-link page-color suave-hover">Quiz</a>
+                    <a href="galeria.html" class="nav-link page-color suave-hover">Galeria</a>
+                    <a href="contato.html" class="nav-link page-color suave-hover">Contato</a>
+                    <a href="sobre.html" class="nav-link page-color suave-hover">Sobre</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        
+    <div class="container py-5">
+        <h1 class="h1 bold text-center my-5 preto-verde">Entre em contato conosco!</h1> 
+        <p class=" h3 text-center mb-5 preto-verde">Pensando em algo mirabolante? alguma ideia interessante? Gostaria de fechar um patrocínio ou até uma doação? Não se preocupe! Entre em contato conosco preenchendo o formulário abaixo. Leva pouco tempo e respondemos em pouco tempo</p>
+        <div class="card col-12 shadow" style=" background-color: rgb(255, 253, 248);">
+            <div class="row g-0">
+                <div class="col-0 col-md-4" style="position:relative">
+                    <img src="entreEmContato.jpg" alt="imagem ilustrando o contato" class="img-fluid rounded-start d-none d-md-block" style="position: absolute; bottom: 0; left: 0;">
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title text-center medium preto-verde">Formulário de Contato</h5>
+                        <h6 class="card-substitle thin text-center mb-5 preto-verde">Responderemos em até 7 dias úteis</h6>
+
+                        <form class="card-text" action="" method="post">
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                                <label for="nome" class="form-label">Nome</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+                                <label for="email" class="form-label">E-mail</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" id="email" placeholder="XX XXXX-XXXXX" required>
+                                <label for="tel" class="form-label">Telefone</label>
+                            </div>
+                            <div class="row">
+                                <div class="form-group form-floating col-md-6 mb-3">
+                                    <select id="estado" class="form-select preto-verde" required>
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                    <label for="estado" class="ms-3">Estado</label>
+                                </div>
+
+                                <div class="form-floating col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                                    <label for="cidade" class="form-label ms-3">Cidade</label>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea type="text" class="form-control" id="mensagem" placeholder="Mensagem" required></textarea>
+                                <label for="mensagem" class="form-label">Sua mensagem</label>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn verde-escurobg page-color fs-5 rounded-4 col-12 ">Enviar Formulário de Contato</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <footer class="p-3 verde-escurobg page-color text-center">
+        &copy; 2025 ReByte - Todos os Direitos Reservados
+    </footer>
+</body>
+</html>

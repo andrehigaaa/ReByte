@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="garbage.png">
+
+    <!-- Normalize css -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <!-- Css exclusivo da página -->
+    <style>
+        .carousel-item img {
+            border: 2px solid #2f412f;
+            border-radius: 10px;
+        }
+
+        .carousel-caption p {
+            color: #f0f0d8;
+            background-color: #2f412f;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar py-1 navbar-expand-sm sticky-top shadow" style=" height: 60px">
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <span class="fs-1 page-color thin">Re</span><span class="fs-1 me-5 page-color medium">Byte</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                <span class="navbar-toggler-icon text-end"></span>
+            </button>
+        
+            <!-- Area que pode ser expandida/contraida -->
+            <div class="collapse navbar-collapse verde-escurobg ps-3 rounded" id="menuNavbar">
+
+                <!-- Barra de navegação -->
+                <div class="navbar-nav ms-auto">
+
+                    <!-- Itens da barra de navegação -->
+                    <!-- Principal, contato, sobre, etc -->
+
+                    <!-- Principal -->
+                    <a href="#" class="nav-link page-color suave-hover">Principal</a>
+
+                    <!-- Produtos -->
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle page-color suave-hover" data-bs-toggle="dropdown">Soluções</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="reciclagem.html" class="dropdown-item verde-escuro suave-hover">R. R. R.</a></li>
+                            <li><a href="política.html" class="dropdown-item verde-escuro suave-hover">Políticas</a></li>
+                            <li><a href="consumomoderado.html" class="dropdown-item verde-escuro suave-hover">Pontos de Coleta</a></li>
+                        </ul>
+                    </div>
+                    <a href="noticias.html" class="nav-link page-color suave-hover">Notícias</a>
+                    <a href="perguntas.html" class="nav-link page-color suave-hover">Quiz</a>
+                    <a href="galeria.html" class="nav-link page-color suave-hover">Galeria</a>
+                    <a href="contato.html" class="nav-link page-color suave-hover">Contato</a>
+                    <a href="sobre.html" class="nav-link page-color suave-hover">Sobre</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        
+
+    <section id="noticias" class="my-5 container text-center rounded">
+            <h1 class="verde-escuro bold">Notícias Sobre Lixo Eletrônico(E-lixo)</h1>
+            <h3 class="mb-5 preto-verde">Clique em qualquer notícia abaixo para acessar a matéria completa no site original.</h2>
+            <br><br>
+            <div id="carouselNoticiasPage" class="carousel slide suave-hover" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="https://share.google/SOYsTiICxrpFwLw1h" target="_blank">
+                    <img src="CNN.jpg" class="d-block mx-auto" alt="Notícia CNN">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Entenda o crescimento do lixo eletrônico no mundo.</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://share.google/FR1OGukzU17a84Z5I" target="_blank">
+                    <img src="G1.jpg" class="d-block mx-auto" alt="Notícia G1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Brasil entre os maiores produtores de E-lixo.</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://share.google/Nqd7cXN5JcFH7o7sV" target="_blank">
+                    <img src="JS.jpg" class="d-block mx-auto" alt="Notícia JS">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Como a reciclagem de eletrônicos pode melhorar o meio ambiente.</p>
+                    </div>
+                    </a>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticiasPage" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticiasPage" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+    </section>
+
+    <footer class="p-3 verde-escurobg page-color text-center">
+        &copy; 2025 ReByte - Todos os Direitos Reservados
+    </footer>
+
+</body>
+</html>

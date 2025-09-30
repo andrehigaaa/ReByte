@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz E-Lixo</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="shorcut icon" href="garbage.png">
+
+    <!-- Normalize css -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <!-- Css exclusivo -->
+    <style>
+        .labubu{
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            background: rgb(255, 253, 248);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        .opção{ 
+            display: block; 
+            padding: 12px; 
+            margin-bottom: 5px; 
+            border: 1px solid #06220d; 
+            border-radius: 15px; 
+            cursor: pointer; 
+            transition: background 0.3s, border 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .opção:hover { 
+        background: #f7a547;
+        transform: scale(1.02);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="radio"]:checked + .opção .feedback
+        { display: block; }
+
+        input[type="radio"]:checked + .opção.correta
+        { background: #b0fdda; 
+        border-color: #198754; }
+
+        input[type="radio"]:checked + .opção:not(.correta) 
+        { background: #f8d7da; 
+        border-color: #dc3545; }
+
+        .feedback
+        { display: none; 
+        font-size: 20px; 
+        margin-top: 10px; 
+        color: #000f04;
+        }
+        body {
+            background-image: url(imgquiz.jpg); /* Coloque o caminho da sua imagem */
+            background-size: contain; /* Faz a imagem cobrir toda a tela */
+            background-repeat: repeat; /*  repetição da imagem */
+            background-position: center; /* Centraliza a imagem */
+        }
+        h3{
+            font-size: 40px;
+            color: #04240c;
+        }
+        h5{
+            color: rgb(59, 30, 2);
+            font-family: sf-medium; 
+        }
+        label{
+            font-size: 20px;
+            font-family: sf;
+            color: #0c2502;
+        }
+        p{
+            font-size: 20px;
+            margin-top: 15px;
+            text-align: center;
+            font-family: sf-medium;
+            color: #04240c;
+        }
+        hr{
+            border: none; 
+            border-top: 2px solid #000000; 
+            width: 100%;
+        }
+    </style>
+  
+</head>
+<body>
+    <nav class="navbar py-1 navbar-expand-sm sticky-top shadow" style=" height: 60px">
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <span class="fs-1 page-color thin">Re</span><span class="fs-1 me-5 page-color medium">Byte</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                <span class="navbar-toggler-icon text-end"></span>
+            </button>
+        
+            <!-- Area que pode ser expandida/contraida -->
+            <div class="collapse navbar-collapse verde-escurobg ps-3 rounded" id="menuNavbar">
+
+                <!-- Barra de navegação -->
+                <div class="navbar-nav ms-auto">
+
+                    <!-- Itens da barra de navegação -->
+                    <!-- Principal, contato, sobre, etc -->
+
+                    <!-- Principal -->
+                    <a href="#" class="nav-link page-color suave-hover">Principal</a>
+
+                    <!-- Produtos -->
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle page-color suave-hover" data-bs-toggle="dropdown">Soluções</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="reciclagem.html" class="dropdown-item verde-escuro suave-hover">R. R. R.</a></li>
+                            <li><a href="política.html" class="dropdown-item verde-escuro suave-hover">Políticas</a></li>
+                            <li><a href="consumomoderado.html" class="dropdown-item verde-escuro suave-hover">Pontos de Coleta</a></li>
+                        </ul>
+                    </div>
+                    <a href="noticias.html" class="nav-link page-color suave-hover">Notícias</a>
+                    <a href="perguntas.html" class="nav-link page-color suave-hover">Quiz</a>
+                    <a href="galeria.html" class="nav-link page-color suave-hover">Galeria</a>
+                    <a href="contato.html" class="nav-link page-color suave-hover">Contato</a>
+                    <a href="sobre.html" class="nav-link page-color suave-hover">Sobre</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="labubu">
+            <h3 class="mb-3 text-center bold ">Quiz - Lixo Eletrônico</h3>
+            <form>
+
+                <div class="mb-4">
+                <h5>1. O QUE É E-LIXO?</h5>
+
+                <input type="radio" id="q1a" name="q1">
+                <label for="q1a" class="opção">A) Qualquer tipo de lixo doméstico
+                    <div class="feedback">Errado. Muito genérico; inclui resíduos orgânicos, recicláveis etc.</div>
+                </label>
+
+                <input type="radio" id="q1b" name="q1">
+                <label for="q1b" class="opção correta">B) Resíduos de equipamentos elétricos e eletrônicos
+                    <div class="feedback">Correto! E-lixo é o termo ideal para se referir a sucata/resíduos gerados por aparelhos eletrônicos e elétricos (celulares, computadores, TV's etc.)</div>
+                </label>
+
+                <input type="radio" id="q1c" name="q1">
+                <label for="q1c" class="opção">C) Apenas baterias e pilhas usadas
+                    <div class="feedback">Errado. São e-lixo, mas não representam todo o conjunto.</div>
+                </label>
+
+                <input type="radio" id="q1d" name="q1">
+                <label for="q1d" class="opção">D) Resíduos hospitalares
+                    <div class="feedback">Errado. São classificados como lixo hospitalar, não eletrônico.</div>
+                </label>
+                </div>
+                
+
+                <!-- Questão 2 -->
+                <div class="mb-4">
+                <h5>2. QUAL DESTES ITENS É CONSIDERADO E-LIXO?</h5>
+
+                <input type="radio" id="q2a" name="q2">
+                <label for="q2a" class="opção">A) Garrafa plástica
+                    <div class="feedback">Errado. É plástico reciclável, não eletrônico.</div>
+                </label>
+
+                <input type="radio" id="q2b" name="q2">
+                <label for="q2b" class="opção">B) Casca de fruta
+                    <div class="feedback"> Errado. Lixo orgânico.</div>
+                </label>
+
+                <input type="radio" id="q2c" name="q2">
+                <label for="q2c" class="opção correta">C) Notebook quebrado
+                    <div class="feedback">Correto! É um eletrônico descartado.</div>
+                </label>
+
+                <input type="radio" id="q2d" name="q2">
+                <label for="q2d" class="opção">D) Papel reciclável
+                    <div class="feedback">Errado. Resíduo sólido e reciclável, não eletrônico.</div>
+                </label>
+                </div>
+
+                <!-- Questão 3 -->
+                <div class="mb-4">
+                <h5>3. QUAL MATERIAL PERIGOSO PODE SER ENCONTRADO EM CELULARES E COMPUTADORES ANTIGOS?</h5>
+
+                <input type="radio" id="q3a" name="q3">
+                <label for="q3a" class="opção correta">A) Mercúrio e chumbo
+                    <div class="feedback">Correto! Ambos são tóxicos e, comuns em telas, soldas e baterias.</div>
+                </label>
+
+                <input type="radio" id="q3b" name="q3">
+                <label for="q3b" class="opção">B) Plástico PET
+                    <div class="feedback">Errado. Usado em garrafas, não é material eletrônico tóxico.</div>
+                </label>
+
+                <input type="radio" id="q3c" name="q3">
+                <label for="q3c" class="opção">C) Cobre puro
+                    <div class="feedback">Errado. É valioso, mas não é o foco de toxicidade.</div>
+                </label>
+
+                <input type="radio" id="q3d" name="q3">
+                <label for="q2d" class="opção">D) Alumínio reciclado
+                    <div class="feedback">Errado. Também pode aparecer, mas não é perigoso como chumbo/mercúrio.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>4. QUAL É A CONSEQUÊNCIA DO DESCARTE INCORRETO DO E-LIXO?</h5>
+
+                <input type="radio" id="q4a" name="q4">
+                <label for="q4a" class="opção">A) Melhoria da fertilidade do solo
+                    <div class="feedback">Errado. É justamente o contrário.</div>
+                </label>
+
+                <input type="radio" id="q4b" name="q4">
+                <label for="q4b" class="opção">B) Aumento da biodiversidade
+                    <div class="feedback">Errado. Poluição mata espécies, não aumenta.</div>
+                </label>
+
+                <input type="radio" id="q4c" name="q4">
+                <label for="q4c" class="opção">C) Redução da poluição do ar
+                    <div class="feedback">Errado. Só ocorreria em processos corretos, não no descarte incorreto.</div>
+                </label>
+
+                <input type="radio" id="q4d" name="q4">
+                <label for="q4d" class="opção correta">D) Contaminação do solo e da água
+                    <div class="feedback">Correto! Metais pesados lixiviam e poluem.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>5. QUAL É O PAÍS QUE MAIS GERA E-LIXO NO MUNDO ATUALMENTE?</h5>
+
+                <input type="radio" id="q5a" name="q5">
+                <label for="q5a" class="opção">A) Índia
+                    <div class="feedback">Errado. Gera muito, mas não é a maior.</div>
+                </label>
+
+                <input type="radio" id="q5b" name="q5">
+                <label for="q5b" class="opção correta">B) China
+                    <div class="feedback">Correto! Maior produtora e consumidora de eletrônicos, logo maior geradora.</div>
+                </label>
+
+                <input type="radio" id="q5c" name="q5">
+                <label for="q5c" class="opção">C) EUA
+                    <div class="feedback">Errado. Também lidera em per capita, mas em toneladas fica atrás da China.</div>
+                </label>
+
+                <input type="radio" id="q5d" name="q5">
+                <label for="q5d" class="opção">D) Brasil
+                    <div class="feedback">Errado. Está entre os 10 primeiros, mas não está no topo.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>6. O QUE SIGNIFICA "LOGÍSTICA REVERSA" NO CONTEXTO DO E-LIXO?</h5>
+
+                <input type="radio" id="q6a" name="q6">
+                <label for="q6a" class="opção correta">A) Recolher resíduos para descarte adequado e reciclagem
+                    <div class="feedback">Corrreto! Esta é a definição correta.</div>
+                </label>
+
+                <input type="radio" id="q6b" name="q6">
+                <label for="q6b" class="opção">B) Vender produtos antigos no exterior
+                    <div class="feedback">Errado. Isso é comércio de usados, não é logística reversa formal.</div>
+                </label>
+
+                <input type="radio" id="q6c" name="q6">
+                <label for="q6c" class="opção">C) Queimar lixo eletrônico em fornos industriai
+                    <div class="feedback">Errado. Prática incorreta, não prevista em lei.</div>
+                </label>
+
+                <input type="radio" id="q6d" name="q6">
+                <label for="q6d" class="opção">D) Guardar eletrônicos quebrados em casa
+                    <div class="feedback">Errado. Essa prática não resolve o problema ambiental.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>7. QUAL DOS SEGUINTES MATERIAIS PODEM SER RECUPERADOS DO LIXO ELETRÔNICO?</h5>
+
+                <input type="radio" id="q7a" name="q7">
+                <label for="q7a" class="opção">A) Ouro
+                    <div class="feedback">Está correto, mas incompleta.</div>
+                </label>
+
+                <input type="radio" id="q7b" name="q7">
+                <label for="q7b" class="opção">B) Prata
+                    <div class="feedback">Está correto, mas incompleta.</div>
+                </label>
+
+                <input type="radio" id="q7c" name="q7">
+                <label for="q7c" class="opção">C) Cobre
+                    <div class="feedback">Está correto, mas incompleta.</div>
+                </label>
+
+                <input type="radio" id="q7d" name="q7">
+                <label for="q7d" class="opção correta">D) Todas as alternativas anteriores
+                    <div class="feedback">Correto! Ouro, Prata e Cobre podem ser extraídos.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>8. APROXIMADAMENTE QUANTAS TONELADAS DE E-LIXO O MUNDO GEROU EM 2022?</h5>
+
+                <input type="radio" id="q8a" name="q8">
+                <label for="q8a" class="opção">A) 17 milhões
+                    <div class="feedback">Errado. Subestimado.</div>
+                </label>
+
+                <input type="radio" id="q8b" name="q8">
+                <label for="q8b" class="opção">B) 35 milhões
+                    <div class="feedback">Errado. Ainda muito abaixo.</div>
+                </label>
+
+                <input type="radio" id="q8c" name="q8">
+                <label for="q8c" class="opção correta">C) 62 milhões
+                    <div class="feedback">Correto! Dado do Global E-waste Monitor 2024.</div>
+                </label>
+
+                <input type="radio" id="q8d" name="q8">
+                <label for="q8d" class="opção">D) 108 milhôes
+                    <div class="feedback">Errado. Acima do real registrado.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>9. QUAL DESTES É UM EXEMPLO DE DESCARTE INADEQUADO DE E-LIXO?</h5>
+
+                <input type="radio" id="q9a" name="q9">
+                <label for="q9a" class="opção">A) Levar celular velho para posto de coleta
+                    <div class="feedback">Errado. Essa é uma prática correta.</div>
+                </label>
+
+                <input type="radio" id="q9b" name="q9">
+                <label for="q9b" class="opção correta">B) Jogar bateria no lixo comum
+                    <div class="feedback">Correto! Contamina gravemente o nosso meio-ambiente.</div>
+                </label>
+
+                <input type="radio" id="q9c" name="q9">
+                <label for="q9c" class="opção">C) Doar computador em bom estado
+                    <div class="feedback">Errado. Prolonga a vida útil.</div>
+                </label>
+
+                <input type="radio" id="q9d" name="q9">
+                <label for="q9d" class="opção">D) Reciclar cabos de cobre
+                    <div class="feedback">Errado. É uma prática sustentável.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>10. QUAL DESTES EQUIPAMENTOS NÃO É CONSIDERADO E-LIXO?</h5>
+
+                <input type="radio" id="q10a" name="q10">
+                <label for="q10a" class="opção">A) Geladeira quebrada
+                    <div class="feedback">Errado. eletrodoméstico, e-lixo.</div>
+                </label>
+
+                <input type="radio" id="q10b" name="q10">
+                <label for="q10b" class="opção">B) Televisão antiga
+                    <div class="feedback">Errado. Também é um eletrodoméstico.</div>
+                </label>
+
+                <input type="radio" id="q10c" name="q10">
+                <label for="q10c" class="opção correta">C) Garrafa de vidro
+                    <div class="feedback">Correto! Não é eletrônico.</div>
+                </label>
+
+                <input type="radio" id="q10d" name="q10">
+                <label for="q10d" class="opção">D) Micro-ondas sem uso
+                    <div class="feedback"> Errado. Um eletrodosmético.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>11. NO BRASIL, A GESTÃO DO E-LIXO É REGULADA PELA POLÍTICA NACIONAL DE RESÍDUOS SÓLIDOS (PNRS). DE ACORDO COM ESSA LEI, QUAL DOS INSTRUMENTOS É ESSENCIAL PARA GARANTIR A DESTINAÇÃO FINAL AMBIENTALMENTE ADEQUADA DE EQUIPAMENTOS ELETROELETRÔNICOS?</h5>
+
+                <input type="radio" id="q11a" name="q11">
+                <label for="q11a" class="opção">A) Incineração obrigatória de todos os resíduos eletrônicos
+                    <div class="feedback">Errado. Não é prevista como solução geral, apenas em casos específicos e controlados.
+                </div>
+                </label>
+
+                <input type="radio" id="q11b" name="q11">
+                <label for="q11b" class="opção correta">B)  Logística reversa, com responsabilidade compartilhada entre fabricantes, importadores, distribuidores, comerciantes e consumidores
+                    <div class="feedback">Correto! Porque a PNRS (Lei nº 12.305/2010) determina que o setor produtivo deve estruturar sistemas de logística reversa, assumindo responsabilidade pelo ciclo de vida do produto junto com o consumidor.
+                </div>
+                </label>
+
+                <input type="radio" id="q11c" name="q11">
+                <label for="q11c" class="opção">C)  Exportação de resíduos
+                    <div class="feedback">Errado. Prática restrita, proibida em muitos casos pelo acordo internacional da Basiléia.
+                </div>
+                </label>
+
+                <input type="radio" id="q11d" name="q11">
+                <label for="q11d" class="opção">D) Apenas aterros sanitários
+                    <div class="feedback">Errado. Destinação final, mas não cumpre a exigência de reciclagem e reaproveitamento de materiais.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>12. UMA ESCOLA ORGANIZOU UMA CAMPANHA DE COLETA DE PILHAS E BATERIAS USADAS. AO FINAL, FORAM RECOLHIDOS DIVERSOS MATERIAIS, INCLUINDO CELULARES ANTIGOS, CARREGADORES, PILHAS E BATERIAS PORTÁTEIS. CONSIDERANDO AS ORIENTAÇÕES AMBIENTAIS CORRETAS E A LESGISLAÇÃO VIGENTE, QUAL DEVE SER O DESTINO ADEQUADO DESSES RESÍDUOS?</h5>
+
+                <input type="radio" id="q12a" name="q12">
+                <label for="q12a" class="opção">A)  Jogar todos os materiais em lixeiras comuns, já que são pequenos e não causam grande impacto ambiental
+                    <div class="feedback">Errado. Os materiais liberariam metais pesados (chumbo, mercúrio, cádmio) em aterros comuns.
+                </div>
+                </label>
+
+                <input type="radio" id="q12b" name="q12">
+                <label for="q12b" class="opção">B)  Enterrar pilhas e baterias no quintal da escola para evitar contato com pessoas, mesmo que possam atingir o solo e a água
+                    <div class="feedback">Errado. Contamina solo e água subterrânea, causando risco de envenenamento e bioacumulação.
+                </div>
+                </label>
+
+                <input type="radio" id="q12c" name="q12">
+                <label for="q12c" class="opção correta">C) Destinar pilhas, baterias e eletrônicos para pontos de coleta específicos ou programas de logística reversa autorizados, garantindo reciclagem ou tratamento adequado
+                    <div class="feedback">Correto! Essa é a prática correta, prevista na PNRS (Lei nº 12.305/2010) e em resoluções do CONAMA, pois garante que metais pesados e substâncias tóxicas sejam tratados de forma ambientalmente adequada.
+                </div>
+                </label>
+
+                <input type="radio" id="q12d" name="q12">
+                <label for="q12d" class="opção">D) Armazenar os resíduos eletrônicos indefinidamente em uma sala da escola até que percam sua toxicidade
+                    <div class="feedback">Errado. Não elimina o problema, só posterga; a toxicidade não “desaparece” com o tempo.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>13. VOCÊ COMPROU UM CELULAR NOVO, MAS O ANTIGO AINDA FUNCIONA, APESAR DE ESTAR UM POUCO LENTO. QUAL É A ATITUDE MAIS CONSCIENTE EM RELAÇÃO AO E-LIXO?</h5>
+
+                <input type="radio" id="q13a" name="q13">
+                <label for="q13a" class="opção correta">A) Doar o celular para alguém que precise ou encaminhá-lo para um programa de reuso/reciclagem
+                    <div class="feedback">Correto! Doar prolonga a vida útil do equipamento, reduzindo geração de e-waste.</div>
+                </label>
+
+                <input type="radio" id="q13b" name="q13">
+                <label for="q13b" class="opção">B)  Jogar o celular antigo no lixo comum, já que ele não será mais usado
+                    <div class="feedback">Errado. Risco de contaminação.</div>
+                </label>
+
+                <input type="radio" id="q13c" name="q13">
+                <label for="q3c" class="opção">C) Guardar o celular antigo em uma gaveta para nunca mais utilizá-lo
+                    <div class="feedback">Errado. Evita descarte imediato, mas não resolve o problema ambiental.
+                </div>
+                </label>
+
+                <input type="radio" id="q13d" name="q13">
+                <label for="13d" class="opção">D) Desmontar o celular em casa e jogar as peças separadas no lixo 
+                    <div class="feedback">Errado. Risco de exposição a metais pesados e descarte inadequado.
+                    </div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>14. POR QUE A CONSCIENTIZAÇÃO DA POPULAÇÃO É FUNDAMENTAL PARA REDUZIR O IMPACTO DO E-LIXO?</h5>
+
+                <input type="radio" id="q14a" name="q14">
+                <label for="q14a" class="opção">A)  Porque apenas governos e empresas podem resolver o problema, sem participação dos consumidores
+                    <div class="feedback">Errado. Governos e empresas têm papel, mas o consumidor também é parte da solução.
+                </div>
+                </label>
+
+                <input type="radio" id="q14b" name="q14">
+                <label for="q14b" class="opção correta">B) Porque a maioria das pessoas não sabem que eletrônicos descartados incorretamente contaminam solo, água e até o ar
+                    <div class="feedback">Correto! A informação e a educação ambiental são essenciais para mudar comportamentos e estimular práticas corretas (coleta, reciclagem, reuso).
+                </div>
+                </label>
+
+                <input type="radio" id="q14c" name="q14">
+                <label for="q14c" class="opção">C) Porque jogar eletrônicos no lixo comum é a forma mais barata de descarte
+                    <div class="feedback">Errado. Lixo comum é inadequado, ainda que “barato”.
+                </div>
+                </label>
+
+                <input type="radio" id="q14d" name="q14">
+                <label for="q14d" class="opção">D)  Porque o e-lixo não representa um risco real ao meio ambiente
+                    <div class="feedback">Errado. E-lixo representa riscos sérios ambientais.</div>
+                </label>
+                </div>
+
+                <div class="mb-4">
+                <h5>15. UMA EMPRESA DE TECNOLOGIA PLANEJA SUBSTITUIR TODOS OS SEUS COMPUTADORES ANTIGOS POR MODELOS NOVOS. CONSIDERADO O CONCEITO DE E-LIXO E PRÁTICAS DE SUSTENTABILIDADE, QUAL SERIA A ABORDAGEM MAIS RESPONSÁVEL E EFICIENTE PARA REDUZIR IMPACTOS AMBIENTAIS?</h5>
+
+                <input type="radio" id="q15a" name="q15">
+                <label for="q15a" class="opção">A) Jogar todos os computadores antigos no lixo comum, pois assim liberam espaço rapidamente
+                    <div class="feedback">Errado. Contamina solo e água; prática ambientalmente incorreta.</div>
+                </label>
+
+                <input type="radio" id="q15b" name="q15">
+                <label for="q15b" class="opção">B) Vender os computadores antigos para sucateiros sem qualquer controle, já que alguém vai se beneficiar economicamente
+                    <div class="feedback">Errado. Pode levar à disposição inadequada e poluição, mesmo que gere lucro imediato.
+                </div>
+                </label>
+
+                <input type="radio" id="q15c" name="q15">
+                <label for="q15c" class="opção">C) Guardar os computadores antigos indefinidamente, esperando que percam seu valor ambiental
+                    <div class="feedback">Errado. Evita descarte imediato, mas não resolve a geração de e-lixo nem permite reaproveitamento de materiais.
+                </div>
+                </label>
+
+                <input type="radio" id="q15d" name="q15">
+                <label for="q215d" class="opção correta">D) Implementar um programa de logística reversa, enviando os equipamentos antigos para reciclagem, reaproveitamento de peças e recuperação de metais preciosos, além de doar ou recondicionar os que ainda funcionam
+                    <div class="feedback">Combina reciclagem segura, reuso de equipamentos e recuperação de metais valiosos, seguindo os princípios de economia circular e as exigências da PNRS.
+                </div>
+                </label>
+
+                <hr>
+
+                <p>Esperamos que com esse quiz você tenha aprendido o que é e-lixo, e o porque ele é prejudicial para o nosso meio-ambiente. Aproveite os ensinamentos do quiz para preservar/cuidar melhor do mundo em que vivemos, e tornar o nosso planeta mais sustentável e melhor para todos que habitam nele.</p>
+                </div>
+
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="p-3 verde-escurobg page-color text-center">
+        &copy; 2025 ReByte - Todos os Direitos Reservados
+    </footer>
+</body>
+</html>

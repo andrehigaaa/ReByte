@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.R.R</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="shorcut icon" href="imagens/garbage.png">
+    <link rel="shorcut icon" href="garbage.png">
+    <!-- Normalize css -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <!-- Css exclusivo da página -->
+    <style>
+        .labubu{
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            background: rgb(255, 253, 248);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        details{
+        
+            margin: 0 auto;    
+            text-align: center;  
+            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 15px;
+            cursor: pointer;
+            border: 2px solid;
+            max-width: 1000px;
+            
+        }
+        details:hover{
+          background: #b7d1a3;
+        }
+        summary{
+          list-style: none;
+          height: 10px;
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+        .details{
+          margin-top: 20px;
+        }
+
+    </style>
+<body>
+    <nav class="navbar py-1 navbar-expand-sm sticky-top shadow" style=" height: 60px">
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <span class="fs-1 page-color thin">Re</span><span class="fs-1 me-5 page-color medium">Byte</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                <span class="navbar-toggler-icon text-end"></span>
+            </button>
+        
+            <!-- Area que pode ser expandida/contraida -->
+            <div class="collapse navbar-collapse verde-escurobg ps-3 rounded" id="menuNavbar">
+
+                <!-- Barra de navegação -->
+                <div class="navbar-nav ms-auto">
+
+                    <!-- Itens da barra de navegação -->
+                    <!-- Principal, contato, sobre, etc -->
+
+                    <!-- Principal -->
+                    <a href="#" class="nav-link page-color suave-hover">Principal</a>
+
+                    <!-- Produtos -->
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle page-color suave-hover" data-bs-toggle="dropdown">Soluções</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="reciclagem.html" class="dropdown-item verde-escuro suave-hover">R. R. R.</a></li>
+                            <li><a href="política.html" class="dropdown-item verde-escuro suave-hover">Políticas</a></li>
+                            <li><a href="consumomoderado.html" class="dropdown-item verde-escuro suave-hover">Pontos de Coleta</a></li>
+                        </ul>
+                    </div>
+                    <a href="noticias.html" class="nav-link page-color suave-hover">Notícias</a>
+                    <a href="perguntas.html" class="nav-link page-color suave-hover">Quiz</a>
+                    <a href="galeria.html" class="nav-link page-color suave-hover">Galeria</a>
+                    <a href="contato.html" class="nav-link page-color suave-hover">Contato</a>
+                    <a href="sobre.html" class="nav-link page-color suave-hover">Sobre</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="labubu shadow preto-verde container py-5">
+
+           <h1 class="bold text-center">Principais motivos para o consumo exagerado:</h1>
+              <details class="suave-hover">
+                 <summary class="fs-5 medium"> Obsolescência tecnológica</summary>
+                 <p class="details">Esse tipo ocorre quando novas tecnologias substituem as antigas, tornando os produtos antigos menos eficientes ou desejáveis. Por exemplo, aparelhos de DVD foram substituídos pelo streaming digital, e computadores antigos muitas vezes não suportam os softwares mais recentes. Mesmo que o produto ainda funcione, ele passa a ser considerado “ultrapassado”.</p>
+              </details>
+              <details class="suave-hover">
+                <summary class="fs-5 medium"> Obsolescência programada</summary>
+                <p class="details">A obsolescência programada acontece quando os fabricantes produzem itens com prazo de vida curto de propósito, fazendo com que eles quebrem ou deixem de funcionar rapidamente. Um exemplo comum são alguns celulares ou impressoras que param de funcionar após pouco tempo de uso. Isso força o consumidor a comprar outro produto, aumentando o lucro das empresas, mas também gera mais lixo e desperdício.</p>
+              </details>
+              <details class="suave-hover">
+                <summary class="fs-5 medium"> Obsolescência funcional</summary>
+                <p class="details">A obsolescência funcional acontece quando o produto ainda está em bom estado, mas não atende mais às necessidades atuais. Um exemplo é um celular antigo que não consegue rodar aplicativos modernos ou tirar fotos com qualidade suficiente. Nesse caso, as pessoas acabam trocando o aparelho para conseguir realizar tarefas que antes não eram possíveis.</p>
+              </details class="suave-hover">
+              <details class="suave-hover">
+                <summary class="fs-5 medium">Obsolescência percebida ou psicológica</summary>
+                <p class="details">A obsolescência percebida é quando o consumidor sente que precisa de algo mais moderno ou estiloso, mesmo que o produto antigo funcione perfeitamente. Isso acontece muito com roupas, gadgets e eletrônicos. A motivação é mais ligada à aparência, moda ou status do que à necessidade real de substituir o produto.</p>
+              </details class="suave-hover">
+              <details class="suave-hover">
+                <summary class="fs-5 medium">Publicidade e Marketing</summary>
+                <p class="details">Anúncios constantes incentivam a compra de novos dispositivos, mostrando recursos modernos ou promovendo a ideia de que o consumidor “precisa” do produto.</p>
+              </details>
+             
+    
+        <h1 class="bold text-center mt-5">Reduzir, Reutilizar e Reciclar</h1>
+    
+
+<p class="fs-5">Hoje em dia a tecnologia faz parte da nossa vida, como o celular, computador e até eletrodomésticos inteligentes. Mas quando esses aparelhos quebram ou ficam velhos, eles viram lixo eletrônico (e-lixo), que é perigoso porque pode soltar metais tóxicos como chumbo e mercúrio, poluindo o solo, a água e o ar.</p>
+<p class="fs-5">Reciclar e dar o destino certo para esses materiais é muito importante, porque além de evitar poluição, ajuda a reaproveitar metais valiosos, como ouro e cobre, sem precisar explorar tanto a natureza. Isso também gera empregos em empresas que fazem a desmontagem e a coleta.</p>
+<p class="fs-5">No nosso dia a dia, podemos ajudar doando aparelhos que ainda funcionam, levando os que não funcionam para pontos de coleta e separando o e-lixo do lixo comum. Muitos fabricantes também têm programas para receber de volta os produtos antigos.</p>
+<p class="fs-5">Cuidar do descarte de lixo eletrônico não é só uma obrigação, é uma forma de pensar no futuro e cuidar do planeta. Quando reciclamos, mostramos que dá para usar a tecnologia sem destruir o meio ambiente.</p>
+
+
+
+
+</div>
+</div>
+
+    <footer class="p-3 verde-escurobg page-color text-center">
+        &copy; 2025 ReByte - Todos os Direitos Reservados
+    </footer>
+    
+</body>
+</html>

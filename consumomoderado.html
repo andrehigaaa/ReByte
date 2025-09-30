@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONTOS DE COLETAS - ReByte</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="shorcut icon" href="garbage.png">
+
+    <!-- Normalize css -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <!-- Css exclusivo da página -->
+    <style>
+        .labubu{
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            background: rgb(255, 253, 248);
+            border-radius: 20px;
+            padding: 32px;
+        }
+    </style>
+<body>
+    <nav class="navbar py-1 navbar-expand-sm sticky-top shadow" style=" height: 60px">
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <span class="fs-1 page-color thin">Re</span><span class="fs-1 me-5 page-color medium">Byte</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                <span class="navbar-toggler-icon text-end"></span>
+            </button>
+        
+            <!-- Area que pode ser expandida/contraida -->
+            <div class="collapse navbar-collapse verde-escurobg ps-3 rounded" id="menuNavbar">
+
+                <!-- Barra de navegação -->
+                <div class="navbar-nav ms-auto">
+
+                    <!-- Itens da barra de navegação -->
+                    <!-- Principal, contato, sobre, etc -->
+
+                    <!-- Principal -->
+                    <a href="#" class="nav-link page-color suave-hover">Principal</a>
+
+                    <!-- Produtos -->
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle page-color suave-hover" data-bs-toggle="dropdown">Soluções</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="reciclagem.html" class="dropdown-item verde-escuro suave-hover">R. R. R.</a></li>
+                            <li><a href="política.html" class="dropdown-item verde-escuro suave-hover">Políticas</a></li>
+                            <li><a href="consumomoderado.html" class="dropdown-item verde-escuro suave-hover">Pontos de Coleta</a></li>
+                        </ul>
+                    </div>
+                    <a href="noticias.html" class="nav-link page-color suave-hover">Notícias</a>
+                    <a href="perguntas.html" class="nav-link page-color suave-hover">Quiz</a>
+                    <a href="galeria.html" class="nav-link page-color suave-hover">Galeria</a>
+                    <a href="contato.html" class="nav-link page-color suave-hover">Contato</a>
+                    <a href="sobre.html" class="nav-link page-color suave-hover">Sobre</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        
+
+    <div class="labubu shadow preto-verde container py-5">
+
+        <h1 class="text-center mb-3 bold">História dos Pontos de Coletas</h1>
+        <p class="fs-4">Os pontos de coleta de e-lixo começaram a surgir no início dos anos 2000, quando o consumo de aparelhos eletrônicos cresceu muito no mundo inteiro e o descarte incorreto começou a gerar sérios problemas ambientais e de saúde. Cada vez mais pessoas trocavam celulares, computadores e televisores, e o lixo eletrônico passou a se acumular em grande quantidade.</p>
+
+        <p class="fs-4">A preocupação aumentou porque esses produtos possuem metais pesados e substâncias tóxicas, como chumbo, mercúrio e cádmio, que contaminam o solo e a água quando jogados no lixo comum. Além disso, muitos desses materiais poderiam ser reaproveitados, reduzindo a exploração de recursos naturais.</p>
+
+        <p class="fs-4">Por isso, governos, organizações ambientais e até empresas criaram pontos de coleta específicos para que a população tivesse onde entregar seus aparelhos usados. O objetivo principal era reduzir os impactos ambientais, evitar riscos à saúde, incentivar a reciclagem e promover a logística reversa, em que os fabricantes assumem a responsabilidade de dar destino correto aos produtos que colocam no mercado.</p>
+
+        <h1 class="text-center mt-5 mb-3 bold">Importância</h1>
+        <p class="fs-4">Os pontos de coleta de e-lixo surgiram porque o aumento do consumo de eletrônicos trouxe sérios problemas ambientais e de saúde devido ao descarte incorreto. Esses locais permitem que celulares, computadores, pilhas e outros aparelhos sejam entregues com segurança, evitando que metais pesados contaminem o solo, a água e o ar. Além disso, possibilitam a reciclagem e o reaproveitamento de materiais como plásticos e metais, reduzindo a exploração de recursos naturais. Também têm papel educativo, incentivando hábitos de consumo mais conscientes e ajudando a população a participar ativamente da preservação ambiental.</p>
+
+        <h1 class="text-center mt-5 mb-3 bold">Pontos de Coletas (UF)</h1>
+
+        <table class="table table-striped table-bordered suave-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Cidade/Localidade</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Organização Responsável</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">São Paulo (SP)</th>
+                    <td>São Paulo - Zona Leste</td>
+                    <td>Rua Templários, 192, Vila Formosa, São Paulo - SP</td>
+                    <td>Sucata Digital</td>
+                </tr>
+                <tr>
+                    <th scope="row">Rio de Janeiro (RJ)</th>
+                    <td>Rio de Janeiro - Botafogo</td>
+                    <td>Rua General Polidoro, nº 65, Botafogo</td>
+                    <td>Posto de Entrega Voluntária</td>
+                </tr>
+                <tr>
+                    <th scope="row">Minas Gerais (MG)</th>
+                    <td>Rio Pomba</td>
+                    <td>Praça Doutor Último de Carvalho, Rio Pomba - MG</td>
+                    <td>Prefeitura Municipal de Rio Pomba</td>
+                </tr>
+                <tr>
+                    <th scope="row">Goiás (GO)</th>
+                    <td>Goiânia</td>
+                    <td>Órion Complex, Setor Marista, Goiânia – GO</td>
+                    <td>Green Eletron</td>
+                </tr>
+                <tr>
+                    <th scope="row">Paraná (PR)</th>
+                    <td>Bituruna</td>
+                    <td>Praça do Fogo, Bituruna - PR</td>
+                    <td>Prefeitura Municipal de Bituruna</td>
+                </tr>
+                <tr>
+                    <th scope="row">Santa Catarina (SC)</th>
+                    <td>São José</td>
+                    <td>Parque Mário Covas, São José - SC</td>
+                    <td>Prefeitura Municipal de São José</td>
+                </tr>
+                <tr>
+                    <th scope="row">Rio Grande do Sul (RS)</th>
+                    <td>Novo Hamburgo</td>
+                    <td>Rua Almirante Barroso, Novo Hamburgo – RS</td>
+                    <td>Prefeitura Municipal de Novo Hamburgo</td>
+                </tr>
+                <tr>
+                    <th scope="row">Bahia (BA)</th>
+                    <td>Salvador</td>
+                    <td>Rua da Paz, Salvador - BA</td>
+                    <td>ABREE</td>
+                </tr>
+                <tr>
+                    <th scope="row">Pernambuco (PE)</th>
+                    <td>Recife</td>
+                    <td>Rua do Sol, Recife - PE</td>
+                    <td>Green Eletron</td>
+                </tr>
+                <tr>
+                    <th scope="row">Ceará (CE)</th>
+                    <td>Fortaleza</td>
+                    <td>Avenida Beira Mar, Fortaleza - CE</td>
+                    <td>Sucata Digital</td>
+                </tr>
+                <tr>
+                    <th scope="row">Alagoas (AL)</th>
+                    <td>Maceió</td>
+                    <td>Rua do Comércio, Maceió – AL</td>
+                    <td>ABREE</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sergipe (SE)</th>
+                    <td>Aracaju</td>
+                    <td>Rua da Cultura, Aracaju - SE</td>
+                    <td>Green Eletron</td>
+                </tr>
+                <tr>
+                    <th scope="row">Paraíba (PB)</th>
+                    <td>João Pessoa</td>
+                    <td>Avenida Epitácio Pessoa, João Pessoa – PB</td>
+                    <td>Sucata Digital</td>
+                </tr>
+                <tr>
+                    <th scope="row">Rio Grande do Norte (RN)</th>
+                    <td>Natal</td>
+                    <td>Rua do Sol, Natal - RN</td>
+                    <td>ABREE</td>
+                </tr>
+                <tr>
+                    <th scope="row">Maranhão (MA)</th>
+                    <td>São Luís</td>
+                    <td>Avenida dos Holandeses, São Luís - MA</td>
+                    <td>Green Eletron</td>
+                </tr>
+                <tr>
+                    <th scope="row">Piauí (PI)</th>
+                    <td>Teresina</td>
+                    <td>Rua dos Andradas, Teresina - PI</td>
+                    <td>Sucata Digital</td>
+                </tr>
+                <tr>
+                    <th scope="row">Amazonas (AM)</th>
+                    <td>Manaus</td>
+                    <td>Rua dos Andradas, Manaus – AM</td>
+                    <td>Green Eletron</td>
+                </tr>
+                <tr>
+                    <th scope="row">Rondônia (RO)</th>
+                    <td>Porto Velho</td>
+                    <td>Avenida dos Imigrantes, Porto Velho – RO</td>
+                    <td>ABREE</td>
+                </tr>
+                <tr>
+                    <th scope="row">Acre (AC)</th>
+                    <td>Rio Branco</td>
+                    <td>Rua da Paz, Rio Branco – AC</td>
+                    <td>Green Eletron</td>
+                </tr>
+                <tr>
+                    <th scope="row">Roraima (RR)</th>
+                    <td>Boa Vista</td>
+                    <td>Rua do Sol, Boa Vista – RR</td>
+                    <td>Sucata Digital</td>
+                </tr>
+                <tr>
+                    <th scope="row">Mato Grosso (MT)</th>
+                    <td>Cuiabá</td>
+                    <td>Avenida da Integração, Cuiabá – MT</td>
+                    <td>ABREE</td>
+                </tr>
+                <tr>
+                    <th scope="row">Mato Grosso do Sul (MS)</th>
+                    <td>Campo Grande</td>
+                    <td>Rua dos Três Poderes, Campo Grande – MS</td>
+                    <td>Green Eletron</td>
+                </tr>
+                <tr>
+                    <th scope="row">Distrito Federal (DF)</th>
+                    <td>Brasília</td>
+                    <td>Parque Ecológico Três Meninas, Samambaia – DF</td>
+                    <td>Governo do Distrito Federal</td>
+                </tr>
+                    <th scope="row">Espirito Santo (ES)</th>
+                    <td>Vila Velha</td>
+                    <td>Av. Comissário José Dantas de Melo, 21 – Vila Velha – ES</td>
+                    <td>Universidade Vila Velha (UVV)</td>
+                </tr>
+            </tbody>
+        </table>
+
+</div>
+    <footer class="p-3 verde-escurobg page-color text-center">
+        &copy; 2025 ReByte - Todos os Direitos Reservados
+    </footer>
+
+</body>
+</html>

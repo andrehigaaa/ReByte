@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+    @font-face {
+        font-family: 'sf';
+        src: url(SF-Pro-Display-Regular.otf) format('opentype');
+    }
+    @font-face {
+        font-family: 'sf-thin';
+        src: url(SF-Pro-Display-Thin.otf) format('opentype');
+    } 
+    @font-face {
+        font-family: 'sf-bold';
+        src: url(SF-Pro-Display-Bold.otf) format('opentype');
+    } 
+    @font-face {
+        font-family: 'sf-medium';
+        src: url(SF-Pro-Display-Medium.otf) format('opentype');
+    } 
+    body{
+        font-family: sf;
+        background-color: #fcfce8;;
+    }
+
+    nav {
+        background-color: #2f412f
+    }
+
+    .preto-verde{
+        color: #203020;
+    }
+    
+    .verde-escuro{
+        color: #2f412f;
+    }
+
+    .verde-medio{
+        color: #648a64;
+    }
+
+    .verde-claro{
+        color: #b7d1a3;
+    }
+
+    .terracota{
+        color:#d18c38
+    }
+
+    .page-color{
+        color: #fcfce8;
+    }
+
+    .preto-verdebg{
+        background-color: #101710;
+    }
+    
+    .verde-escurobg{
+        background-color: #2f412f;
+    }
+
+    .terracotabg{
+        background-color:#d18c38
+    }
+
+    .page-colorbg{
+        background-color: #fcfce8;
+    }
+
+    .verde-mediobg{
+        background-color: #648a64;
+    }
+
+    .verde-clarobg{
+        background-color: #b7d1a3;
+    }
+
+    .thin{
+        font-family: sf-thin;
+    }
+    .bold{
+        font-family: sf-bold;
+    }
+    .medium{
+        font-family: sf-medium;
+    }
+
+    .suave-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .suave-hover:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
